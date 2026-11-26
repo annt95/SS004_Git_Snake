@@ -15,7 +15,7 @@
 using namespace std;
 
 #ifndef _WIN32
-//class TerminalMode {
+class TerminalMode {
 public:
     TerminalMode() {
         if (!isatty(STDIN_FILENO) || tcgetattr(STDIN_FILENO, &original_) == -1) {
