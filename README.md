@@ -3,7 +3,15 @@
 Trò chơi rắn săn mồi (Snake) chạy trên console, viết bằng C++.
 Dự án dùng để thực hành làm việc nhóm với Git trong môn SS004.
 
-## Yêu cầu 1
+## Thành viên nhóm
+
+| Họ và tên          | MSSV     | GitHub                                         |
+|--------------------|----------|------------------------------------------------|
+| Ngô Thành An       | 26730083 | [annt95](https://github.com/annt95)            |
+| Nguyễn Hữu Trương  | 26730143 | [26730143](https://github.com/26730143)        |
+| Nguyễn Minh Tiến   | 26730137 | [UIT26730137](https://github.com/UIT26730137)  |
+
+## Yêu cầu
 
 - Windows, macOS hoặc Linux
   - Windows dùng `windows.h` / `conio.h`
