@@ -1,21 +1,35 @@
 # SS004_Git_Snake
 
-Trò chơi rắn săn mồi (Snake) chạy trên console Windows, viết bằng C++.
+Trò chơi rắn săn mồi (Snake) chạy trên console, viết bằng C++.
 Dự án dùng để thực hành làm việc nhóm với Git trong môn SS004.
 
 ## Yêu cầu
 
-- Windows (code dùng `windows.h` và `conio.h`)
-- Trình biên dịch C++: MinGW `g++`, Dev-C++ hoặc Visual Studio
+- Windows, macOS hoặc Linux
+  - Windows dùng `windows.h` / `conio.h`
+  - macOS/Linux dùng `termios` và mã ANSI, cần chạy trong terminal thật
+- Trình biên dịch C++11 trở lên: `g++`, `clang++`, MinGW hoặc Visual Studio
 
 ## Biên dịch và chạy
 
+Windows:
+
 ```bash
-g++ snake.cpp -o snake.exe
+g++ -std=c++11 snake.cpp -o snake.exe
 ```
 
 ```bash
 snake.exe
+```
+
+macOS / Linux:
+
+```bash
+g++ -std=c++11 snake.cpp -o snake
+```
+
+```bash
+./snake
 ```
 
 ## Cách chơi
@@ -26,6 +40,7 @@ snake.exe
 | `x`  | Xuống   |
 | `a`  | Trái    |
 | `d`  | Phải    |
+| `q`  | Thoát   |
 
 Rắn không thể quay đầu ngược 180° (ví dụ đang đi phải thì bấm `a` sẽ bị bỏ qua).
 
@@ -35,6 +50,9 @@ Rắn không thể quay đầu ngược 180° (ví dụ đang đi phải thì b�
   - `Ve()` — vẽ rắn lên console
   - `DiChuyen(Huong)` — di chuyển rắn 1 ô theo hướng
 - `gotoxy(x, y)` — đặt con trỏ console tới vị trí cần vẽ
+- `readKeyIfAvailable()` — đọc phím không chặn (trả về `-1` nếu chưa bấm)
+- `clearScreen()` — xoá màn hình
+- `TerminalMode` (macOS/Linux) — bật chế độ raw cho terminal, khôi phục khi thoát
 
 ## Quy trình đóng góp
 
