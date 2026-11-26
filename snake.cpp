@@ -115,10 +115,11 @@ int main()
     while (true){
         const int key = readKeyIfAvailable();
         if (key == 'q' || key == 'Q') break;
-        if (key == 'a') Huong = 2;
-        if (key == 'w') Huong = 3;
-        if (key == 'd') Huong = 0;
-        if (key == 'x') Huong = 1;
+        // Khong cho quay dau 180 do (tu can vao than)
+        if (key == 'a' && Huong != 0) Huong = 2;
+        if (key == 'w' && Huong != 1) Huong = 3;
+        if (key == 'd' && Huong != 2) Huong = 0;
+        if (key == 'x' && Huong != 3) Huong = 1;
 
         clearScreen();
         r.Ve();
