@@ -78,7 +78,7 @@ struct Point{
 };
 class CONRAN{
 public:
-    struct Point A[100];
+    Point A[100];
     int DoDai;
     CONRAN(){
         DoDai = 3;
