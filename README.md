@@ -3,7 +3,7 @@
 Trò chơi rắn săn mồi (Snake) chạy trên console, viết bằng C++.
 Dự án dùng để thực hành làm việc nhóm với Git trong môn SS004.
 
-## Yêu cầu
+## Yêu cầu 1
 
 - Windows, macOS hoặc Linux
   - Windows dùng `windows.h` / `conio.h`
