@@ -22,7 +22,7 @@ public:
             throw runtime_error("Snake requires an interactive terminal.");
         }
 
-        termios raw = original_;
+        //termios raw = original_;
         raw.c_lflag &= static_cast<tcflag_t>(~(ICANON | ECHO));
         raw.c_cc[VMIN] = 0;
         raw.c_cc[VTIME] = 0;
