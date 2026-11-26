@@ -72,26 +72,33 @@ void clearScreen() {
 #endif
 }
 
+// Huong di chuyen cua ran:
+//   0 = phai (d), 1 = xuong (x), 2 = trai (a), 3 = len (w)
+
+// Dua con tro console den vi tri (column, line)
 void gotoxy( int column, int line );
 struct Point{
     int x,y;
 };
+// CONRAN: con ran. A[0] la dau, A[1..DoDai-1] la than.
 class CONRAN{
 public:
-    Point A[100];
-    int DoDai;
+    Point A[100];  // toa do cac dot cua ran
+    int DoDai;     // so dot hien tai
     CONRAN(){
         DoDai = 3;
         A[0].x = 10; A[0].y = 10;
         A[1].x = 9; A[1].y = 10;
         A[2].x = 8; A[2].y = 10;
     }
+    // Ve ran len man hinh console
     void Ve(){
         for (int i = 0; i < DoDai; i++){
             gotoxy(A[i].x,A[i].y);
             cout<<"X";
         }
     }
+    // Di chuyen ran 1 o theo Huong: than doi theo dot phia truoc, dau di tiep
     void DiChuyen(int Huong){
         for (int i = DoDai-1; i>0;i--)
             A[i] = A[i-1];
